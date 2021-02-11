@@ -10,7 +10,7 @@ class MyFlat_button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-      color: Colors1.pinkColor,
+      color: Colors1. button_color,
       child: Container(
         width: MediaQuery.of(context).size.width * 0.55,
         padding: EdgeInsets.all(8.0),

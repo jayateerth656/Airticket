@@ -118,9 +118,9 @@ class Start_bookingstate extends State<Start_booking> {
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: _current == index
-                              ? Colors1.pinkColor
+                              ? Colors1.button_color
 
-                              : Colors1.greyColor,
+                              : Colors1.dots_color,
                         ),
                       );
                     }),

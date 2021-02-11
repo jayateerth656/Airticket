@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:airticket_app/common_properties/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -34,7 +35,7 @@ class SplashState extends State<A_splashscreen> {
       body: Container(
         width: width,
         height: height,
-        color: HexColor('#000099'),
+        color: Colors1.titleBlue,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
