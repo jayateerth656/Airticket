@@ -4,7 +4,7 @@ import 'package:airticket_app/common_properties/colors.dart';
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-  MyButton({@required this.onPressed, @required this.title});
+  MyButton({@required this.onPressed, @required this.title,});
 
   final GestureTapCallback onPressed;
   final String title;

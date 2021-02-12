@@ -1,6 +1,7 @@
 import 'package:airticket_app/common_properties/colors.dart';
 import 'package:airticket_app/common_properties/strings.dart';
 import 'package:airticket_app/components/Raised_button.dart';
+import 'package:airticket_app/components/sizedbox.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -125,9 +126,10 @@ class Start_bookingstate extends State<Start_booking> {
                       );
                     }),
                   ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
+                  SpacerClass(),                                                //accessing sized box properties
+                  // SizedBox(
+                  //   height: 20.0,
+                  // ),
                   Padding(
                     padding: const EdgeInsets.only(
                       top: 0,
