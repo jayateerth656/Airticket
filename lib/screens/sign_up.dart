@@ -53,19 +53,19 @@ class _SignUpState extends State<SignUp> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Create',
+                      Strings. create_account,
                             style: GoogleFonts.spartan(
                                 color: Colors1.createAccountColor,
                                 fontSize: 30,
                                 fontWeight: FontWeight.bold),
                           ),
-                          Text(
-                            'an account',
-                            style: GoogleFonts.spartan(
-                                color:Colors1.createAccountColor,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
-                          ),
+                          // Text(
+                          //   'an account',
+                          //   style: GoogleFonts.spartan(
+                          //       color:Colors1.createAccountColor,
+                          //       fontSize: 30,
+                          //       fontWeight: FontWeight.bold),
+                          // ),
                         ],
                       ),
                       SpacerClass(),
@@ -75,7 +75,8 @@ class _SignUpState extends State<SignUp> {
                             keyboardType: TextInputType.name,
                             validator: (name) {
                               Pattern pattern =
-                                  r'^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$';
+                                  Strings.name_pattern;
+                                  // r'^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$';
                               RegExp regex = new RegExp(pattern);
                               if (!regex.hasMatch(name))
                                 return 'Invalid username';
@@ -93,7 +94,7 @@ class _SignUpState extends State<SignUp> {
                               }
                             },
                             decoration: InputDecoration(
-                                hintText: 'Name',
+                                // hintText: 'Name',
                                 labelText: 'Name',
                                 labelStyle: TextStyle(
                                     color: Colors1. mailIconColor,
@@ -104,10 +105,7 @@ class _SignUpState extends State<SignUp> {
                             focusNode: _emailFocusNode,
                             keyboardType: TextInputType.emailAddress,
                             validator: (email) {
-                              Pattern pattern =
-                                  r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
-                                  r"{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]"
-                                  r"{0,253}[a-zA-Z0-9])?)*$";
+                              Pattern pattern = Strings.pattern;
                               RegExp regex = new RegExp(pattern);
                               if (!regex.hasMatch(email))
                                 return 'Invalid Email';
@@ -149,7 +147,8 @@ class _SignUpState extends State<SignUp> {
                             keyboardType: TextInputType.visiblePassword,
                             validator: (password) {
                               Pattern pattern =
-                                  r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
+                                  Strings.password_pattern;
+                                  // r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
                               RegExp regex = new RegExp(pattern);
                               if (!regex.hasMatch(password))
                                 return 'Invalid password';
@@ -199,7 +198,7 @@ class _SignUpState extends State<SignUp> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Already have an account?',
+                            Strings.If_exist ,
                             style: TextStyle(
                                 fontSize: 16.0,
                                 // color: CustomizedColor.emailtitle,
@@ -210,10 +209,10 @@ class _SignUpState extends State<SignUp> {
                               // Navigator.pushNamed(context, id);
                             },
                             child: Text(
-                              ' Sign In',
+                                Strings.SIGN_IN,
                               style: TextStyle(
                                   fontSize: 16.0,
-                                  // color: CustomizedColors.titlepinkcolor,
+                                  color: Colors1.sign_in,
                                   fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -227,10 +226,10 @@ class _SignUpState extends State<SignUp> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'Skip for Now',
+                              Strings. SKIP,
                               style: TextStyle(
                                   fontSize: 16.0,
-                                  // color: CustomizedColors.emailtitle,
+                               color:   Colors1.skipNowColor,
                                   fontWeight: FontWeight.bold),
                             ),
                           ],

@@ -16,4 +16,13 @@ class Strings{
   static const String email = "Email";
   static const String Password = "password";
 
+static const String pattern=
+r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
+r"{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]"
+r"{0,253}[a-zA-Z0-9])?)*$";
+
+static const String password_pattern = r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
+  static const String name_pattern =  r'^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$';
+
+
 }
