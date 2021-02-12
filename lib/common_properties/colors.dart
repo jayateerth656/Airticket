@@ -15,5 +15,8 @@ class Colors1
   static const textSignInColor = Color.fromRGBO(255, 121, 168, 1);
   static const skipNowColor = Color.fromRGBO(186, 186, 186, 1);
   static const white= Color.fromRGBO(255,255,255,0.9);
+  static const name= Color.fromRGBO(169,169,169,1);
+  static const email= Color.fromRGBO(169,169,169,1);
+  static const password= Color.fromRGBO(169,169,169,1);
 
 }

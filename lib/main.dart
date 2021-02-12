@@ -1,4 +1,5 @@
 import 'package:airticket_app/screens/airSplash.dart';
+import 'package:airticket_app/screens/loginscreen.dart';
 import 'package:airticket_app/screens/sign_up.dart';
 import 'package:airticket_app/screens/startBooking.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home:  SignUp(),
+      home: LoginScreen(),
     );
   }
 }

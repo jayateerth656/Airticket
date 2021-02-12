@@ -11,7 +11,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 
 
-class SignUp extends StatefulWidget {
+class SignUp extends StatefulWidget {                                                    //stateful because we have set state
   @override
   _SignUpState createState() => _SignUpState();
 }
@@ -25,7 +25,7 @@ class _SignUpState extends State<SignUp> {
 
   bool _isHidden = true;
 
-  void _togglePasswordView() {
+  void _togglePasswordView() {                                                     //to show password status
     setState(() {
       _isHidden = !_isHidden;
     });
@@ -42,20 +42,22 @@ class _SignUpState extends State<SignUp> {
               Padding(
                 padding: EdgeInsets.only(
                     top: 80.0, bottom: 20.0, left: 20.0, right: 20.0),
-                child: Form(
+                child: Form(                                                     //form helps to validate multiple fields its similar to container
                   key: _formKey,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SizedBox(height: 30),
+                      SpacerClass(),
+                      SpacerClass(),
+                      SpacerClass(),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                      Strings. create_account,
+                      Strings. create_account,                                      //calling string from common class
                             style: GoogleFonts.spartan(
-                                color: Colors1.createAccountColor,
+                                color: Colors1.createAccountColor,                  //accessing color from color class
                                 fontSize: 30,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -75,7 +77,7 @@ class _SignUpState extends State<SignUp> {
                             keyboardType: TextInputType.name,
                             validator: (name) {
                               Pattern pattern =
-                                  Strings.name_pattern;
+                                  Strings.name_pattern;                               //calling name pattern from strings
                                   // r'^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$';
                               RegExp regex = new RegExp(pattern);
                               if (!regex.hasMatch(name))
@@ -95,17 +97,17 @@ class _SignUpState extends State<SignUp> {
                             },
                             decoration: InputDecoration(
                                 // hintText: 'Name',
-                                labelText: 'Name',
+                                labelText: Strings.Name,
                                 labelStyle: TextStyle(
-                                    color: Colors1. mailIconColor,
+                                    color: Colors1.name,
                                     fontWeight: FontWeight.bold)),
                           ),
-                          SizedBox(height: 10.0),
+                          SpacerClass(),                                                //accessing sized box
                           TextFormField(
                             focusNode: _emailFocusNode,
                             keyboardType: TextInputType.emailAddress,
                             validator: (email) {
-                              Pattern pattern = Strings.pattern;
+                              Pattern pattern = Strings.email_pattern;        // getting email pattern
                               RegExp regex = new RegExp(pattern);
                               if (!regex.hasMatch(email))
                                 return 'Invalid Email';
@@ -123,9 +125,9 @@ class _SignUpState extends State<SignUp> {
                               }
                             },
                             decoration: InputDecoration(
-                              labelText: 'Email',
+                              labelText: Strings.email,
                               labelStyle: TextStyle(
-                                  color: Colors1. mailIconColor,
+                                  color: Colors1.email,
                                   fontWeight: FontWeight.bold),
 
                               suffixIcon: InkWell(
@@ -143,11 +145,11 @@ class _SignUpState extends State<SignUp> {
                           ),
                           SizedBox(height: 10.0),
                           TextFormField(
-                            obscureText: _isHidden,
+                            obscureText: _isHidden,                                           //hides the text
                             keyboardType: TextInputType.visiblePassword,
                             validator: (password) {
                               Pattern pattern =
-                                  Strings.password_pattern;
+                                  Strings.password_pattern;                                              //password pattern
                                   // r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
                               RegExp regex = new RegExp(pattern);
                               if (!regex.hasMatch(password))
@@ -163,7 +165,7 @@ class _SignUpState extends State<SignUp> {
                               }
                             },
                             decoration: InputDecoration(
-                              labelText: 'Password',
+                              labelText: Strings.Password,
                               labelStyle: TextStyle(
                                   // color: CustomizedColors.emailtitle,
                                   fontWeight: FontWeight.bold),
@@ -173,9 +175,9 @@ class _SignUpState extends State<SignUp> {
                                   },
                                   child: Icon(
                                     _isHidden
-                                        ? Icons.visibility
+                                        ? Icons.visibility                                   //based on password visibility select the state
                                         : Icons.visibility_off,
-                                    // color: CustomizedColors.emailtitle,
+                                    color: Colors1.email,
                                   )
 
                                 // errorText: wrongPassword ? passwordText : null,
@@ -183,7 +185,7 @@ class _SignUpState extends State<SignUp> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 10.0),
+                          SpacerClass(),
                         ],
                       ),
                       SpacerClass(),
@@ -226,7 +228,7 @@ class _SignUpState extends State<SignUp> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              Strings. SKIP,
+                              Strings.SKIP,
                               style: TextStyle(
                                   fontSize: 16.0,
                                color:   Colors1.skipNowColor,

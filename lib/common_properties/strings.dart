@@ -15,8 +15,10 @@ class Strings{
   static const String Name = "Name";
   static const String email = "Email";
   static const String Password = "password";
+  static const String login = "Login";
+  static const String Noaccount= "Does not have an account?";
 
-static const String pattern=
+static const String email_pattern=
 r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
 r"{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]"
 r"{0,253}[a-zA-Z0-9])?)*$";
