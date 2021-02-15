@@ -18,5 +18,6 @@ class Colors1
   static const name= Color.fromRGBO(169,169,169,1);
   static const email= Color.fromRGBO(169,169,169,1);
   static const password= Color.fromRGBO(169,169,169,1);
+  static const textcolors1 = Colors.pink;
 
 }

@@ -16,7 +16,11 @@ class Strings{
   static const String email = "Email";
   static const String Password = "password";
   static const String login = "Login";
+   static const String login_with= "Login with";
   static const String Noaccount= "Does not have an account?";
+  static const String text_validpassword = "please ENTER VALID PASSWORD";
+  static const String text_validresult = " enter passwprd";
+   
 
 static const String email_pattern=
 r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]"
@@ -28,3 +32,52 @@ static const String password_pattern = r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+String validatePassword(String value) {
+  Pattern pattern =
+      r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
+  RegExp regex = new RegExp(pattern);
+  //print(value);
+  try {
+    if (value.isEmpty) {
+      return Strings.text_validpassword; //this is your password text
+    } else {
+      if (!regex.hasMatch(value))
+        return Strings.text_validresult; //this is your password checking
+      else
+        return null;
+    }
+    }catch(e){
+      throw(e);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
